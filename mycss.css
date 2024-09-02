@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: blue;
+}
+nav{
+    background-color: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+div.logo{
+    color: white;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+
+}
+a.active,a:hover{
+    background: #07518a;
+    transition: .5s;
+}
+.wrapper{
+    display: inline-flex;   
+}
+.wrapper .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-txts{
+    margin-left: 15px;
+    line-height: 10px;
+    
+    overflow: hidden;
+}
+.dynamic-txts li{
+    color: #3ec1ed;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    position:relative;
+    animation: slide 6s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -360px;
+    }
+}
+
+.dynamic-txts li span::after{
+    margin-top:60px;
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: blue;
+    border-left: 2px solid #25f9f9;
+    animation: typing 1.5s steps(10) infinite;
+}
+
+.dynamic-txts li span{
+        position: relative;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin 0, -35px, 0 ,35px;
+    }
+}
